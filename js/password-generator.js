@@ -88,17 +88,38 @@ var upperCasedCharacters = [
     'Z'
 ];
 
+// Function to ask user if they would like to begin generating a password
 let chooseYesOrNo = confirm("Do you want to generate a password?");
 if(chooseYesOrNo === true) {
-    alert("Thank you, choose what you want included in the password.");
+    alert("Thank you! Click generate password to get started.");
 } else {
     alert("Sorry you clicked cancel, maybe next time!");
 }
 
-    
-
 // Function to prompt user for password options
 function getPasswordOptions() {
+   let passwordLength = prompt("Enter the desired password length(It should be no more than '64 characters' and not less than '10 characters'.");
+   if(passwordLength < 10 || passwordLength > 64) {
+    alert("Password must be atleast '10 characters' and atmost '64 characters'. Thank you!");
+    return
+   }; 
+    let includeSpecialCharacters = confirm("Do you want to include Special Characters?");
+        if(includeSpecialCharacters === true) {
+          let randomSC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+        };
+    let includeNumericCharacters = confirm("Do you want to include Numeric Characters?");
+        if(includeNumericCharacters === true) {
+            let randomNC = numericCharacters[Math.floor(Math.random() * numericCharacters.length)];
+        };
+    let includeLowerCasedCharacters = confirm("Do you want to include Lower Cased Characters?");
+        if(includeLowerCasedCharacters === true) {
+            let randomLCC = lowerCasedCharacters[Math.floor(Math.random() * lowerCasedCharacters.length)];
+        };       
+    let includeUpperCasedCharacters = confirm("Do you want to include Upper Cased Characters?");
+        if(includeUpperCasedCharacters === true) {
+            let randomUCC = upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)];
+        }    
+    
    
 }
 
@@ -109,7 +130,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+    getPasswordOptions()
 }
 
 // Get references to the #generate element
