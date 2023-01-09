@@ -88,10 +88,18 @@ var upperCasedCharacters = [
     'Z'
 ];
 
+let chooseYesOrNo = confirm("Do you want to generate a password?");
+if(chooseYesOrNo === true) {
+    alert("Thank you, choose what you want included in the password.");
+} else {
+    alert("Sorry you clicked cancel, maybe next time!");
+}
+
+    
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+   
 }
 
 // Function for getting a random element from an array
