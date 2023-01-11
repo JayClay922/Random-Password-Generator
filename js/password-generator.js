@@ -88,7 +88,7 @@ var upperCasedCharacters = [
     'Z'
 ];
 
-// Function to ask user if they would like to begin generating a password
+// Function to ask user if the user would like to begin generating a password
 let chooseYesOrNo = confirm("Do you want to generate a password?");
 if(chooseYesOrNo === true) {
     alert("Thank you! Click generate password to get started.");
@@ -102,25 +102,47 @@ function getPasswordOptions() {
    if(passwordLength < 10 || passwordLength > 64) {
     alert("Password must be atleast '10 characters' and atmost '64 characters'. Thank you!");
     return
-   }; 
+   };
+
     let includeSpecialCharacters = confirm("Do you want to include Special Characters?");
         if(includeSpecialCharacters === true) {
           let randomSC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+          let finalSpecialCharacters = ""
+            for(let i = 0; i < passwordLength; i++) {
+                let randomSC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+                finalSpecialCharacters = finalSpecialCharacters + randomSC
+            }
         };
+
     let includeNumericCharacters = confirm("Do you want to include Numeric Characters?");
         if(includeNumericCharacters === true) {
             let randomNC = numericCharacters[Math.floor(Math.random() * numericCharacters.length)];
+            let finalNumericCharacters = ""
+            for(let i = 0; i < passwordLength; i++) {
+                let randomNC = numericCharacters[Math.floor(Math.random() * numericCharacters.length)]
+                finalNumericCharacters = finalNumericCharacters + randomNC
+            }
         };
+
     let includeLowerCasedCharacters = confirm("Do you want to include Lower Cased Characters?");
         if(includeLowerCasedCharacters === true) {
             let randomLCC = lowerCasedCharacters[Math.floor(Math.random() * lowerCasedCharacters.length)];
-        };       
+            let finalLowerCase = ""
+            for(let i = 0; i < passwordLength; i++) {
+                let randomLCC = lowerCasedCharacters[Math.floor(Math.random() * lowerCasedCharacters.length)]
+                finalLowerCase = finalLowerCase + randomLCC
+            }
+        };
+
     let includeUpperCasedCharacters = confirm("Do you want to include Upper Cased Characters?");
         if(includeUpperCasedCharacters === true) {
             let randomUCC = upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)];
+            let finalUpperCase = ""
+            for(let i = 0; i < passwordLength; i++) {
+                let randomUCC = upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]
+                finalUpperCase = finalUpperCase + randomUCC
+            }
         }    
-    
-   
 }
 
 // Function for getting a random element from an array
