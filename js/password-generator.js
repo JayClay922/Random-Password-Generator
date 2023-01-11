@@ -104,6 +104,9 @@ function getPasswordOptions() {
     return
    };
 
+   var finalPassword = ""
+
+
     let includeSpecialCharacters = confirm("Do you want to include Special Characters?");
         if(includeSpecialCharacters === true) {
           let randomSC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
@@ -112,6 +115,8 @@ function getPasswordOptions() {
                 let randomSC = specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
                 finalSpecialCharacters = finalSpecialCharacters + randomSC
             }
+            finalPassword = finalPassword + finalSpecialCharacters
+            finalPassword = finalPassword.replace(finalPassword[Math.floor(Math.random() * passwordLength)], randomSC)
         };
 
     let includeNumericCharacters = confirm("Do you want to include Numeric Characters?");
@@ -122,6 +127,7 @@ function getPasswordOptions() {
                 let randomNC = numericCharacters[Math.floor(Math.random() * numericCharacters.length)]
                 finalNumericCharacters = finalNumericCharacters + randomNC
             }
+            finalPassword = finalPassword.replace(finalPassword[3], randomNC)
         };
 
     let includeLowerCasedCharacters = confirm("Do you want to include Lower Cased Characters?");
@@ -132,6 +138,7 @@ function getPasswordOptions() {
                 let randomLCC = lowerCasedCharacters[Math.floor(Math.random() * lowerCasedCharacters.length)]
                 finalLowerCase = finalLowerCase + randomLCC
             }
+            finalPassword = finalPassword.replace(finalPassword[5], randomLCC)
         };
 
     let includeUpperCasedCharacters = confirm("Do you want to include Upper Cased Characters?");
@@ -142,7 +149,10 @@ function getPasswordOptions() {
                 let randomUCC = upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)]
                 finalUpperCase = finalUpperCase + randomUCC
             }
-        }    
+            finalPassword = finalPassword.replace(finalPassword[2], randomUCC)
+        }
+
+        return finalPassword
 }
 
 // Function for getting a random element from an array
@@ -152,7 +162,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-    getPasswordOptions()
+    return getPasswordOptions()
+    
 }
 
 // Get references to the #generate element
