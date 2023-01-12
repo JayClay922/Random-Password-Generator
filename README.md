@@ -75,3 +75,4 @@ SOFTWARE.
 ## Deployed Web Application
 
 The URL of the deployed application is:
+https://jayclay922.github.io/Random-Password-Generator/
