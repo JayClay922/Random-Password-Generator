@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 // Function to ask user if the user would like to begin generating a password
 let chooseYesOrNo = confirm("Do you want to generate a password?");
 if(chooseYesOrNo === true) {
-    alert("Thank you! Click generate password to get started.");
+    alert("Thank you! Click generate password to get started. Atleast one character type should be selected.");
 } else {
     alert("Sorry you clicked cancel, maybe next time!");
 }
