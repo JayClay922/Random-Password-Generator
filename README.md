@@ -22,11 +22,31 @@ In creating the application, there are certain criteria that had to be met to en
 This challenge was certainly challenging, however I was able to acheive the desired outcome.
 1. I was able to write code that will prompt the user to type in how long they wanted their generated password to be, and if they choose any number outside of the parameters given there would be an alert to remind them that the password should be no more than 64 character and no less than 10 characters.
 
+   ![password-length-code](./screenshots/password-length-code.png)
+
+   ![password-length-browser](./screenshots/password-length-browser.png)
+
+   ![password-length-warning-browser](./screenshots/password-length-warning-browser.png)
+
 2. I wrote code that was able to prompt users as to if they wanted to include either numeric, lowercase, uppercase and/or special characters in their generated password. They have to pick atleast one of the options presented to them.
+
+   ![getting-started-browser](./screenshots/getting-started-browser.png)
+
+   ![characters-options-code](./screenshots/characters-options-code.png)
+
+   ![lowercase-option-browser](./screenshots/lowercase-options-browser.png)
+
+   ![uppercase-option-browser](./screenshots/uppercase-options-browser.png)
+
+   ![numeric-option-browser](./screenshots/numeric-option-browser.png)
 
 3. The code was able to validate each input, including how long they want their password to be.
 
 4. Lastly, once all prompts are answered the password is then generated to the page.
+
+   ![password-generator-code](./screenshots/password-generator-code.png)
+
+   ![generated-password-browser](./screenshots/generated-password-browser.png)
 
 ## License
 
